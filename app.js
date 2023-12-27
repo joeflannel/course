@@ -4,7 +4,9 @@ let screenPrice = 125;
 let percentage = 20;
 let fullPrice = 20000;
 let responsive = true;
-let objeto = {
+
+/*some commentary*/
+let object = {
     soul: true,
     body: true,
     grade: 'highest'
