@@ -1,20 +1,7 @@
-let name = 'Georgii'
-console.log(name);
-
-let age = 20;
-console.log(age);
-
-let city = 'Yerevan';
-console.log(city);
-
-let hobby = 'Chess';
-console.log(hobby);
-
-let admin;
-let name2 = "John";
-admin = name2;
-alert(admin);
-
-let planetName = "Earth";
-console.log(planetName);
-let currentUser; 
+let titleProject = 'Оценка стоимости';
+let screensValue = 'шаблонные, c уникальным дизайном, c анимациями';
+let screenPrice = 125;
+let percentage = 20;
+let fullPrice = 20000;
+let responsive = true;
+if (true) console.log("Variables have been set");
