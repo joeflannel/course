@@ -4,4 +4,10 @@ let screenPrice = 125;
 let percentage = 20;
 let fullPrice = 20000;
 let responsive = true;
-if (true) console.log("Variables have been set");
+let objeto = {
+    soul: true,
+    body: true,
+    grade: 'highest'
+}
+
+console.log(objeto.body);
