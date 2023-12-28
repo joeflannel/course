@@ -3,21 +3,29 @@ let percentage = 10;
 let fullPrice;
 
 let titleProject = prompt('Введи название проекта');
+console.log(titleProject);
 let screensValue = prompt('Введи тип экрана');
+console.log(screensValue);
 let responsive = prompt('Нужен ли респонсивный дизайн?');
 
 if (responsive == 'да' || responsive == 'Да' || responsive == 'true' || responsive == 'True') {
     responsive = true;
+    console.log(responsive);
 } else if (responsive == 'нет' || responsive == 'Нет' || responsive == 'не' || responsive == 'false' || responsive == 'False') {
     responsive = false;
+    console.log(responsive);
 }
 
 let service1 = prompt("Какой нужен сервис?");
-let service1Price = prompt("Сколько это будет стоить? (введи только цифру)");
-let service2 = prompt("Какой еще нужен сервис?");
-let service2Price = prompt("Сколько это будет стоить? (введи только цифру)");
+console.log(service1);
+let service1Price = +prompt("Сколько это будет стоить? (введи только цифру)");
+console.log(service1Price);
+let service2 = prompt("Какой ещё нужен сервис?");
+console.log(service2);
+let service2Price = +prompt("Сколько это будет стоить? (введи только цифру)");
+console.log(service2Price);
 
-fullPrice = screenPrice + +service1Price + +service2Price;
+fullPrice = screenPrice + service1Price + service2Price;
 
 let servicePercentPrice = fullPrice - (fullPrice * (percentage / 100));
 console.log("Цена с вычетом процентов: ", Math.round(servicePercentPrice));
