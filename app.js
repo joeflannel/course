@@ -1,19 +1,6 @@
-let titleProject = 'Оценка стоимости';
-let screensValue = 'шаблонные, c уникальным дизайном, c анимациями';
-let screenPrice = 125;
-let percentage = 20;
-let fullPrice = 20000;
-let responsive = true;
+let result;
+let a = Number(prompt("Write value of a"));
+let b = Number(prompt("Wrtie value of b"));
 
-/*some commentary*/
-let object = {
-    soul: true,
-    body: true,
-    grade: 'highest'
-}
-
-console.log(object.body);
-
-let a = 'dick';
-let b = 'dussy';
-console.log(a & b);
+result = (a + b <= 4) ? "Мало" : "Много";
+alert(result);
