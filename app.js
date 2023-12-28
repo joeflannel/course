@@ -12,4 +12,8 @@ let object = {
     grade: 'highest'
 }
 
-console.log(objeto.body);
+console.log(object.body);
+
+let a = 'dick';
+let b = 'dussy';
+console.log(a & b);
