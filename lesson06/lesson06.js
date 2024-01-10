@@ -1,18 +1,39 @@
 //переменные
 let screenPrice = 10000;
 let percentage = 10;
+let service;
+let serviceSecond;
 
 //функции
-let getAllServicePrices = function (price1, price2) {
-    let res = price1 + price2;
-    console.log("Цена на сервисы: ", res);
-    return res
+function checkisNumber(thing) {
+    return !isNaN(parseFloat(thing)) && isFinite(thing)
+}
+
+let getAllServicePrices = function () {
+    let sum = 0;
+
+    for (let i = 0; i <= 1; i++) {
+        if (i === 0) {
+            service = prompt("Какая услуга нужна?");
+        } else if (i === 1) {
+            serviceSecond = prompt("Какая еще услуга нужна?");
+        }
+
+        do {
+            textFromPrompt = prompt('Сколько это будет стоить? (Введите только число)');
+        } while (!checkisNumber(textFromPrompt) || textFromPrompt.trim() === '' || textFromPrompt === null);
+
+        sum += Number(textFromPrompt);
+    }
+
+    console.log("Стоимость всех услуг: ", sum);
+    return sum;
 }
 
 function getFullPrice(buildingPrice, allServicePrices) {
     let res = buildingPrice + allServicePrices;
     console.log("Цена за разработку: ", res);
-    return res
+    return res;
 }
 
 function getTitle(titleProject) {
@@ -23,7 +44,7 @@ function getTitle(titleProject) {
 function getServicePercentPrices(fullPrice, percentage) {
     let res = Math.round(fullPrice - (fullPrice * (percentage / 100)));
     console.log("Цена с вычетом процентов: ", res);
-    return res
+    return res;
 }
 
 function showTypeOf(screensValue) {
@@ -55,25 +76,17 @@ let screensValue = prompt('Введи тип экрана');
 showTypeOf(screensValue);
 
 //нужен ли респонсивный дизайн
-let responsive = prompt('Нужен ли респонсивный дизайн?');
-if (responsive == 'да' || responsive == 'Да' || responsive == 'true' || responsive == 'True') {
+let responsive = prompt('Нужен ли респонсивный дизайн? (Введите "Да" или "Нет"');
+if (responsive == 'Да') {
     responsive = true;
-    console.log("Респонсивность: ", responsive.toString());
-} else if (responsive == 'нет' || responsive == 'Нет' || responsive == 'не' || responsive == 'false' || responsive == 'False') {
+    console.log("Респонсивный дизайн: ", responsive.toString());
+} else if (responsive == 'Нет') {
     responsive = false;
-    console.log("Респонсивность: ", responsive.toString());
+    console.log("Респонсивный дизайн: ", responsive.toString());
 }
 
-//ввод сервисов и цен на них
-let service1 = prompt("Какой нужен сервис?");
-console.log(service1);
-let service1Price = +prompt("Сколько это будет стоить? (введи только цифру)");
-let service2 = prompt("Какой ещё нужен сервис?");
-console.log(service2);
-let service2Price = +prompt("Сколько это будет стоить? (введи только цифру)");
-
 //цена на все сервисы
-let allServicePrices = getAllServicePrices(service1Price, service2Price);
+let allServicePrices = getAllServicePrices();
 
 //цена без вычета процентов
 let fullPrice = getFullPrice(screenPrice, allServicePrices);
