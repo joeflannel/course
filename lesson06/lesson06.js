@@ -90,6 +90,7 @@ let allServicePrices = getAllServicePrices();
 
 //цена без вычета процентов
 let fullPrice = getFullPrice(screenPrice, allServicePrices);
+getRollbackMessage(fullPrice);
 
 //цена с вычетом процентов
 let servicePercentPrice = getServicePercentPrices(fullPrice, percentage);
