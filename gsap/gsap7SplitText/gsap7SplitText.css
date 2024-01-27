@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap");
+
+body {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 300;
+}
+
+#paragraphHero {
+    max-width: 400px;
+}
+
+#play {
+    background-color: blue;
+    border: solid;
+    border-radius: 1000px;
+    border-width: 0px;
+    color: white;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+}
