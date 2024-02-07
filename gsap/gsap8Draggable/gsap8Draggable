@@ -1,0 +1,17 @@
+const section8Container = document.querySelector(".section-8_content-wrapper");
+const section8Circle = document.querySelector(".section-8_circle");
+
+Draggable.create(section8Circle, {
+  bounds: section8Container,
+  inertia: true,
+  onPress: function () {
+    gsap.to(section8Circle, { scale: 1.4, backgroundColor: "#b10d0f" });
+  },
+  onDrag: function () {
+    gsap.to(section8Circle, { scale: 1.2, backgroundColor: "#d86e12" });
+  },
+  onRelease: function () {
+    gsap.to(section8Circle, { scale: 1, backgroundColor: "#5089b1" });
+  },
+  dragResistance: 0.1,
+});
